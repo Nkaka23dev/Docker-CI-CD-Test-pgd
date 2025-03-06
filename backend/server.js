@@ -4,8 +4,27 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
 app.get("/", (req, res) => {
-    res.send("Welcome to the WebSocket server!");
+    res.send(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>WebSocket Server</title>
+            <style>
+                body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+                h1 { color: #3498db; }
+                p { font-size: 18px; }
+            </style>
+        </head>
+        <body>
+            <h1>Welcome to the WebSocket Server!</h1>
+            <p>Connect using a WebSocket client to start real-time communication.</p>
+        </body>
+        </html>
+    `);
 });
+
 
 io.on("connection", (socket) => {
     console.log("What is socket: ", socket)
