@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
         <body>
             <h1>Welcome to the WebSocket Server!</h1>
             <p>Connect using a WebSocket client to start real-time communication.</p>
+            <h5>lorem20</h5>
         </body>
         </html>
     `);

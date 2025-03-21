@@ -1,11 +1,14 @@
 FROM node
 
 WORKDIR /app
-
-COPY . /app
+## We copy package.json seperate to avoid installing it evey time our code changes 
+## without changing package.json file
+COPY package.json /app
 
 RUN npm install
 
-EXPOSE 3000
+COPY . /app
+
+EXPOSE 80
 
 CMD [ "node", "server.js" ]
