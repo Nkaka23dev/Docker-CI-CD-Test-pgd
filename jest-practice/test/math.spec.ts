@@ -19,11 +19,9 @@
 // })
 
 
+import { sum } from "../src/math";
 
-
-import { sum } from "./math";
-
-jest.mock("./math", () => ({
+jest.mock("../src/math", () => ({
     sum: jest.fn()
 }))
 
