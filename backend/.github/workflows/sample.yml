@@ -6,8 +6,11 @@ jobs:
   run-shell-commads:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Welcome to the workflows"
+      - name: Checking echoing 
+        run: echo "Welcome to the workflows"
       - name: Multiple script
         run: |
           node -v
           npm -v
+      - name: Checking inside backend
+        run: echo "Check inside backend"s
