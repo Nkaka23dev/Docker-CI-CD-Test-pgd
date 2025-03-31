@@ -1,0 +1,14 @@
+name: Shell commands
+
+on: [push]
+
+jobs: 
+  run-shell-commads:
+  runs-on: ubuntu-latest
+  steps: 
+    - name: anyname
+    - run: "Welcome to Devops!"
+    - name: Multscripts
+    - run:
+        node -v 
+        npm -v
